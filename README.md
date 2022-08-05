@@ -22,6 +22,7 @@ sigma-key |c1c611c1-0534-41ac-9537-9de570lpc647
 /api/sigma/profesional/dni-resolver | POST | JSON | dni:str | doc: str, apellido: str, nombres: str, calle: str, seccion: str, circuito: str, tipo_doc: str, localidad: str, provincia: str, codigo_postal: str | dict: error | Ilimitado
 /api/sigma/profesional/dni-number-resolver | POST | JSON | dni:str | numero: str, doc: str, nombre: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | dict: error | Ilimitado
 /api/sigma/profesional/dni-resolver-2 | POST | JSON | dni:str | tipoDocumento: str, nroDocumento: str, apellido: str, nombre: str, sexo: str, fechaNacimiento:str, estadoCivil: str, cobertura: list => tipoCobertura: str, nombreObraSocial: str, rnos: str, vigenciaDesde: str, fechaActualizacion:str | dict: error | Ilimitado
+/api/sigma/profesional/num_resolver | POST | JSON | num:str | numero: str, doc: str, nombre: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | dict: error | Ilimitado
 
 ## Medium
 | Endpoint | Metodo | Tipo dato | Data Post | Respuesta 200 OK | Respuesta 400 | Rate Limit
