@@ -38,8 +38,8 @@ sigma-key |c1c611c1-0534-41ac-9537-9de570lpc647
 ## Standard
 | Endpoint | Metodo | Tipo dato | Data Post | Respuesta 200 OK | Respuesta 400 | Rate Limit
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-/api/sigma/standard/dni-number-resolver-standard| POST | JSON | dni:str | doc: str, apellido: str, nombres: str, calle: str, seccion: str, circuito: str, tipo_doc: str, localidad: str, provincia: str, codigo_postal: str | {"error":"No se encontro el dni 12345678 en nuestras base de datos."} | 15 consultas / 30 minutos
-/api/sigma/standard/dni-resolver-standard | POST | JSON | dni:str | numero: str, doc: str, nombre: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | {"error":"No se encontro el dni 12345678 en nuestras base de datos."} | 15 consultas / 30 minutos
+/api/sigma/standard/dni-number-resolver-standard| POST | JSON | dni:str | numero: str, doc: str, nombre: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | {"error":"No se encontro el dni 12345678 en nuestras base de datos."} | 15 consultas / 30 minutos
+/api/sigma/standard/dni-resolver-standard | POST | JSON | dni:str | doc: str, apellido: str, nombres: str, calle: str, seccion: str, circuito: str, tipo_doc: str, localidad: str, provincia: str, codigo_postal: str | {"error":"No se encontro el dni 12345678 en nuestras base de datos."} | 15 consultas / 30 minutos
 
 ## Free
 | Endpoint | Metodo | Tipo dato | Data Post | Respuesta 200 OK | Respuesta 400 | Rate Limit
