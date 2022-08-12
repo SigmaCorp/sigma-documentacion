@@ -45,3 +45,15 @@ sigma-key |c1c611c1-0534-41ac-9537-9de570lpc647
 | Endpoint | Metodo | Tipo dato | Data Post | Respuesta 200 OK | Respuesta 400 | Rate Limit
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 /api/sigma/free/peru-resolver-telefonos | POST | JSON | dict:sigma_db => documento:str, fuente:str, numero:str, tipo:str | {"error": "No se encontro el dato fakedni123 en nuestras base de datos."} | 10 consultas / 5 min 
+
+## Ejemplos de uso plan profesional usando Postman
+
+#### 1) Seteamos el Sigma Token en los headers
+![postman-1](https://user-images.githubusercontent.com/111098138/184422076-29c98e0e-57a7-454f-a9c4-a18315aafaba.png)
+
+
+#### 2) Enviamos un POST al endpoint `/api/sigma/profesional/dni-resolver-2` con el dato `{"dni": "51111111"}`
+![postman-2](https://user-images.githubusercontent.com/111098138/184422499-af24a4c1-37c9-4109-9ae1-b3dac1b5a19d.png)
+
+
+#### 3) Listo
