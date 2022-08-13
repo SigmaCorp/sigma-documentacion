@@ -26,6 +26,8 @@ sigma-key |c1c611c1-0534-41ac-9537-9de570lpc647
 /api/sigma/profesional/dni-number-resolver | POST | JSON | dni:str | numero: str, doc: str, nombre: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | {"error":"No se encontro el dni dnifake123 en nuestras base de datos."} | Ilimitado
 /api/sigma/profesional/dni-resolver-2 | POST | JSON | dni:str | tipoDocumento: str, nroDocumento: str, apellido: str, nombre: str, sexo: str, fechaNacimiento:str, estadoCivil: str, cobertura: list => tipoCobertura: str, nombreObraSocial: str, rnos: str, vigenciaDesde: str, fechaActualizacion:str | {"error":"No se encontro el dni dnifake123 en nuestras base de datos."} | Ilimitado
 /api/sigma/profesional/num_resolver | POST | JSON | num:str | numero: str, doc: str, nombre: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | {"error":"No se encontro el numero 0101010101 en nuestras base de datos."} | Ilimitado
+/api/sigma/profesional/address-info | POST | JSON | direccion:str | numero: str, doc:str, nombre: str, direccion: str, localidad: str, provincia: str, codigo_postal: str, empresa: str | {"error":"Direccion invalida, intenta nuevamente"} | Ilimitado
+/api/sigma/profesional/nombre-resolver | POST | JSON | nombre: str | Documento: str, RazonSocial: str, Actividad: str, Provincia: str | {"error":"Hubo un error en tu query, intenta nuevamente."} | Ilimitado
 
 ## Medium
 | Endpoint | Metodo | Tipo dato | Data Post | Respuesta 200 OK | Respuesta 400 | Rate Limit
