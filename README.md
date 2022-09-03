@@ -30,13 +30,13 @@ Los endpoints OSINT permiten obtener información open source sobre personas.
 - Medium plan
     - [Patente resolver](#patente-resolver-medium-profesional)
     - [Patente DNI resolver](#patente-dni-resolver-medium-profesional)
+    - [Data breach resolver](#data-breach-resolver-medium-profesional)
 - Profesional plan
     - [DNI Profesional resolver](#dni-profesional-resolver-profesional)
     - [Celular resolver](#celular-resolver-profesional)
     - [Direccion resolver](#direccion-resolver-profesional)
     - [Nombre resolver](#nombre-resolver-profesional)
     - [Movistar resolver](#movistar-resolver-profesional)
-    - [Data breach resolver](#data-breach-resolver-profesional)
     - [Magic resolver](#magic-resolver-profesional)
 
 ## Peru Resolver (Free)
@@ -224,6 +224,38 @@ El Patente-DNI resolver permite obtener los datos de un vehiculo a través del D
 ]
 ```
 
+## Data breach Resolver (Medium, profesional)
+Devuelve datos leakeados de un dominio o email determinada.
+
+| Plan | Rate-limit |
+| ---- | ---------- |
+| Medium | 100 consultas / 5 min |
+| Profesional | Sin rate-limit |
+
+## Endpoint URL
+| Path | Ejemplo |
+| ---- | ------- |
+| `/{plan}/osint/argentina/search_engine/data_breach` | https://sigma-search.io/api/v2/medium/osint/argentina/search_engine/data_breach |
+
+## Request Data
+| Metodo | Content-Type | Data |
+| ------ | ------------ | ---- |
+| **POST** | `application/JSON` | `{"query": str}` |
+
+## Respuesta 200 OK
+```json
+[
+    {
+        "usuario": "cr**ca@email.msn.com",
+        "password": "*****"
+    },
+    {
+        "usuario": "cr**ca@gmx.net",
+        "password": "*****"
+    }
+]
+```
+
 ## DNI Profesional Resolver (Profesional)
 El DNI Profesional resolver permite obtener los datos de una persona a través de su DNI, este endpoint incluye más información exclusiva.
 
@@ -394,37 +426,6 @@ El Movistar resolver permite obtener el email de una persona a través de su nú
     "num": "0000000000",
     "email": "example@gmail.com"
 }
-```
-
-## Data breach Resolver (Profesional)
-Devuelve datos leakeados de un dominio o email determinada.
-
-| Plan | Rate-limit |
-| ---- | ---------- |
-| Profesional | Sin rate-limit |
-
-## Endpoint URL
-| Path | Ejemplo |
-| ---- | ------- |
-| `/{plan}/osint/argentina/search_engine/data_breach` | https://sigma-search.io/api/v2/profesional/osint/argentina/search_engine/data_breach |
-
-## Request Data
-| Metodo | Content-Type | Data |
-| ------ | ------------ | ---- |
-| **POST** | `application/JSON` | `{"query": str}` |
-
-## Respuesta 200 OK
-```json
-[
-    {
-        "usuario": "cr**ca@email.msn.com",
-        "password": "*****"
-    },
-    {
-        "usuario": "cr**ca@gmx.net",
-        "password": "*****"
-    }
-]
 ```
 
 ## Magic Resolver (Profesional)
